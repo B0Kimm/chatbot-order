@@ -1,0 +1,39 @@
+export const addTodoAction = todo => ({
+    type : "ADD_TODO",
+    payload : todo
+})
+
+export const toggleTodoAction = todoId => ({
+    type : "TOGGLE_TODO",
+    payload : todoId
+})
+
+export const deleteTodoAction = todoId => ({
+    type : "DELETE_TODO",
+    payload : todoId
+})
+
+const initialState = {todos : []}
+
+
+const todoReducer = (state = initialState, action) => {
+    switch(action.type){
+        case "ADD_TODO" :
+            return {...state, todos : [...state.todos, action.payload ]} //변경되는 것만 insert
+
+        case "TOGGLE_TODO" :
+            return {...state, todos : 
+                        state.todos.map(todo => todo.todoId === action.payload?
+                        {...todo, complete : !todo.complet}: todo)
+            } 
+
+        case "DELETE_TODO" :
+            return {...state, todos : state.todos.filter(todo => todo.todoId !== action.payload)}
+
+        default :
+        return state
+    }
+}
+
+
+export default todoReducer
