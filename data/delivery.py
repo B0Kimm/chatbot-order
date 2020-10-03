@@ -1,6 +1,7 @@
 import pandas as pd
 from pandas import DataFrame
 
+# https://www.bigdatahub.co.kr/product/view.do?pid=1002328
 
 filename = 'Calldata_2007.csv'
 myframe = pd.read_csv(filename, sep = ',', encoding= 'utf-8')
