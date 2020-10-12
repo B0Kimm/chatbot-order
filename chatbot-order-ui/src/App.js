@@ -4,21 +4,21 @@ import { Provider } from 'react-redux'
 //import TodoList from './compoenets/TodoList'
 import store from './store/index.js'
 import AddressForm from './compoenets/AddressForm'
-import Checkout from './compoenets/Checkout'
-import PaymentForm from './compoenets/PaymentForm'
-import OrderReview from './compoenets/OrderReview'
-import Basket from './compoenets/Basket'
+//import Checkout from './compoenets/Checkout'
+//import PaymentForm from './compoenets/PaymentForm'
+//import OrderReview from './compoenets/OrderReview'
+//import Basket from './compoenets/Basket'
 
 
 const App = () => {
   return <>
   <Provider store = {store}>
   <div style = {{width : "1000px", margin: "0 auto"}}>
-      <Basket/>
+      {/* <Basket/> */}
       <AddressForm/>
-      <Checkout/>
-      <PaymentForm/>
-      <OrderReview/>
+      {/* <Checkout/> */}
+      {/* <PaymentForm/> */}
+      {/* <OrderReview/> */}
     </div></Provider>
     </>
 }
